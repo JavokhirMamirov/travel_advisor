@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, {useState, useEffect, createRef} from 'react'
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem,
@@ -9,11 +10,9 @@ import useStyles from './styles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 
-const List = ({places, childClicked, isLoading}) => {
+const List = ({places, childClicked, isLoading, type, setType, rating, setRating}) => {
 
     const classes = useStyles();
-    const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
     const [elRefs, setElRefs] = useState([]);
 
     useEffect(() => {
